@@ -8,6 +8,16 @@
 
 <h:body>
     <h1>teste</h1>
-    <p:spinner />
+    <p:dataTable var="objeto" value="#{livroControl.recuperarTodos()}">
+        <p:column>
+            <h:outputText value="#{objeto.nome}"></h:outputText>
+        </p:column>
+        <p:column>
+            <h:outputText value="#{objeto.autor}"></h:outputText>
+        </p:column>
+        <p:column>
+            <h:outputText value="#{objeto.editora}"></h:outputText>
+        </p:column>
+    </p:dataTable>
 </h:body>
 </html>

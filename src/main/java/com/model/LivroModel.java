@@ -19,6 +19,9 @@ public class LivroModel implements Serializable {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "nome")
+    private String nome;
+
     @Column(name = "avaliacao")
     private int avaliacao;
 

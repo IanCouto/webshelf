@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginControl {
     @GetMapping
     public String login() {
+
         return "index";
     }
 }
