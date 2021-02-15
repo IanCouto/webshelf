@@ -1,14 +1,11 @@
-package com.br.dao;
+package com.br.app.repository;
 
-import com.br.enumerator.EstadoEnum;
-import com.br.model.LivroModel;
-import org.jboss.logging.annotations.Param;
+import com.br.app.model.LivroModel;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LivroDao extends JpaRepository<LivroModel, Long>{
+public interface LivroRepository extends JpaRepository<LivroModel, Long>{
 /*
     @Query(value ="insert into livros (estado, possui, avaliacao, numero_paginas, autor, editora, generos, descricao) " +
             "values (:estado, :possui, :avaliacao, :numero_paginas, :autor, :editora, :generos, :descricao)",nativeQuery = true)

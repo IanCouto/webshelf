@@ -1,7 +1,5 @@
-package com.br.model;
+package com.br.app.model;
 
-import com.br.enumerator.EstadoEnum;
-import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,8 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-@Getter @Setter
+
 @Entity(name = "livros")
+@Getter
+@Setter
 public class LivroModel implements Serializable {
     @Id
     @GeneratedValue
@@ -26,7 +26,7 @@ public class LivroModel implements Serializable {
     private int numero_paginas;
 
     @Column(name = "estado")
-    private EstadoEnum estado;
+    private String estado;
 
     @Column(name = "possui")
     private boolean possui;

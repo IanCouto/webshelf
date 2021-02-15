@@ -1,21 +1,23 @@
-package com.br.control;
+package com.br.app.control;
 
-import com.br.model.LivroModel;
-import com.br.service.LivroService;
+import com.br.app.model.LivroModel;
+import com.br.app.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/livros")
 public class LivroControl {
 
     @Autowired
-    private LivroService service;
+    private LivroRepository repositorio;
 
-    @GetMapping("/livros")
+    @GetMapping
     public List<LivroModel> recuperarTodos() {
-        return service.recuperarTodos();
+        return repositorio.findAll();
     }
 }
