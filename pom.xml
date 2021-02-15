@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.br</groupId>
-    <artifactId>teste1</artifactId>
+    <artifactId>webshelf</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>teste1</name>
+    <name>webshelf</name>
     <packaging>war</packaging>
 
     <properties>
@@ -75,6 +75,12 @@
             <scope>runtime</scope>
             <optional>true</optional>
             <version>2.4.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>10.0.0-RC1</version>
         </dependency>
     </dependencies>
 

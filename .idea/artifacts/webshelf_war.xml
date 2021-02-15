@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="teste1:war">
+  <artifact type="war" name="webshelf:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <module>teste1</module>
+        <module>webshelf</module>
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="teste1-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="teste1:war exploded" />
+    <root id="archive" name="webshelf-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="webshelf:war exploded" />
     </root>
   </artifact>
 </component>

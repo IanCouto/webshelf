@@ -1,4 +1,4 @@
-package com.br.teste1;
+package com.br.control;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

@@ -1,4 +1,4 @@
-package com.br.teste1;
+package com.br.control;
 
 import java.io.*;
 import javax.servlet.http.*;
