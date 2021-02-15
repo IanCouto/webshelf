@@ -1,7 +1,7 @@
-package com.br.app.control;
+package com.control;
 
-import com.br.app.model.LivroModel;
-import com.br.app.repository.LivroRepository;
+import com.model.LivroModel;
+import com.service.LivroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +14,10 @@ import java.util.List;
 public class LivroControl {
 
     @Autowired
-    private LivroRepository repositorio;
+    private LivroService livroService;
 
     @GetMapping
     public List<LivroModel> recuperarTodos() {
-        return repositorio.findAll();
+        return livroService.findAll();
     }
 }

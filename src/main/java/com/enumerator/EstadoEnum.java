@@ -1,4 +1,4 @@
-package com.br.app.enumerator;
+package com.enumerator;
 
 public enum EstadoEnum {
     PARA_LER, LENDO, LIDO
