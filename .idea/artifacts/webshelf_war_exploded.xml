@@ -106,6 +106,7 @@
           <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.20" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.41" />
           <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:9.0.41" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
