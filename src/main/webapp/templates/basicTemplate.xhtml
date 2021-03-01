@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:outputStylesheet name="/css/primeflex.min.css" />
+<h:outputStylesheet name="/css/baseStyle.css" />
+
+<h:head>
+    <title>WebShelf</title>
+</h:head>
+
+<h:body style="margin: 0">
+    <!-- HEADER -->
+    <div class="p-grid p-nogutter">
+        <div class="p-col-12 ">
+            <p:megaMenu styleClass="header" orientation="horizontal" autoDisplay="false">
+                <p:menuitem value="Home" url="#"/>
+                <p:menuitem value="Home" url="#"/>
+            </p:megaMenu>
+        </div>
+    </div>
+
+    <div class="p-grid p-nogutter">
+        <!-- SIDEBAR -->
+        <div class="p-sm-2 no-padding">
+            <p:megaMenu styleClass="sidebar" orientation="vertical" autoDisplay="false">
+                <p:menuitem value="Home" url="#"/>
+                <p:menuitem value="Home" url="#"/>
+            </p:megaMenu>
+        </div>
+
+        <!-- CONTEUDO -->
+        <div class="p-sm-10 conteudo">
+            <ui:insert name="content" >
+
+            </ui:insert>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h:body>
+
+</html>

@@ -1,23 +1,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<h:head>
-</h:head>
+<ui:composition template="/templates/basicTemplate.xhtml">
 
-<h:body>
-    <h1>teste</h1>
-    <p:dataTable var="objeto" value="#{livroControl.recuperarTodos()}">
-        <p:column>
-            <h:outputText value="#{objeto.nome}"></h:outputText>
-        </p:column>
-        <p:column>
-            <h:outputText value="#{objeto.autor}"></h:outputText>
-        </p:column>
-        <p:column>
-            <h:outputText value="#{objeto.editora}"></h:outputText>
-        </p:column>
-    </p:dataTable>
-</h:body>
+    <ui:define name="content">
+        Conteudo da página
+    </ui:define>
+
+</ui:composition>
+
 </html>

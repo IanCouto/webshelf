@@ -31,9 +31,6 @@ public class LivroModel implements Serializable {
     @Column(name = "estado")
     private String estado;
 
-    @Column(name = "possui")
-    private boolean possui;
-
     @Column(name = "autor")
     private String autor;
 
