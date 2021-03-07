@@ -63,12 +63,10 @@ $(document).ready(function(){
             contentType: false,
             processData: false,
             success:function(data){
-                console.log("success");
-                console.log(data);
+                toastr.success('O cadastro foi feito!','Sucesso')
             },
             error: function(data){
-                console.log("error");
-                console.log(data);
+                toastr.error('Não foi possível realizar a requisição.','Erro')
             }
         });
     }));

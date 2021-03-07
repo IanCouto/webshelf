@@ -37,4 +37,7 @@ public class LivroModel implements Serializable {
     @Column(name = "resumo")
     private String resumo;
 
+    @Column(name = "file_path_img")
+    private String file_path_img;
+
 }

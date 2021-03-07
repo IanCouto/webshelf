@@ -8,12 +8,12 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-<h:outputStylesheet name="/css/primeflex.min.css"/>
-
-
+<h:outputStylesheet name="/lib/css/primeflex.min.css"/>
 
 <h:head>
     <title>WebShelf</title>
+    <h:outputStylesheet name="/lib/css/toastr.css"/>
+    <h:outputScript name="/lib/js/toastr.js"/>
     <h:outputStylesheet name="/css/baseStyle.css"/>
     <ui:insert name="css" />
     <ui:insert name="script" />
@@ -39,9 +39,9 @@
         <div class="p-sm-2 no-padding">
             <p:megaMenu styleClass="sidebar" orientation="vertical" autoDisplay="false">
                 <p:menuitem value="Prateleira" url="/" icon="pi pi-fw pi-book"/>
-                <p:menuitem value="Descobrir" url="#" icon="pi pi-fw pi-search"/>
+                <p:menuitem value="Descobrir" url="/descobrir" icon="pi pi-fw pi-search"/>
                 <p:menuitem value="Cadastro" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
-                <p:menuitem value="Sair" url="#"  icon="pi pi-fw pi-sign-out"/>
+                <p:menuitem value="Sair" url="/sair"  icon="pi pi-fw pi-sign-out"/>
             </p:megaMenu>
         </div>
 

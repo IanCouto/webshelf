@@ -10,6 +10,11 @@ public class NavegacaoControl {
         return "/index";
     }
 
+    @GetMapping("/descobrir")
+    public String descbrir(){
+        return "/pages/descobrir";
+    }
+
     @GetMapping("/livros/cadastrar")
     public String cadastrarLivro(){
         return "/pages/cadastroLivros";
