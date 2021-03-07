@@ -26,6 +26,9 @@ public class RelLivrosUsuariosModel implements Serializable {
     @Column(name = "id_usuario")
     private int id_usuario;
 
+    @Column(name = "estado")
+    private String estado;
+
     @Column(name = "avaliacao")
     private int avaliacao;
 

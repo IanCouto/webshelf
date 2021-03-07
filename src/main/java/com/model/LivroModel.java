@@ -19,17 +19,11 @@ public class LivroModel implements Serializable {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "nome")
-    private String nome;
-
-    @Column(name = "avaliacao")
-    private int avaliacao;
+    @Column(name = "titulo")
+    private String titulo;
 
     @Column(name = "numero_paginas")
-    private int numero_paginas;
-
-    @Column(name = "estado")
-    private String estado;
+    private Integer numero_paginas;
 
     @Column(name = "autor")
     private String autor;
@@ -40,7 +34,7 @@ public class LivroModel implements Serializable {
     @Column(name = "generos")
     private String generos;
 
-    @Column(name = "descricao")
-    private String descricao;
+    @Column(name = "resumo")
+    private String resumo;
 
 }

@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+>
+
+<ui:composition template="/templates/basicTemplate.xhtml">
+
+    <ui:define name="css">
+        <h:outputStylesheet name="/css/cadastroLivrosStyle.css"/>
+    </ui:define>
+
+    <ui:define name="script">
+        <h:outputScript name="/js/cadastroScript.js"/>
+    </ui:define>
+
+
+    <ui:define name="content">
+
+        <h:form id="formCadastroLivro" >
+            <div class="p-grid">
+
+                <div class="p-sm-3 p-text-center">
+                    <div class="p-sm-12 ">
+                        <p:graphicImage styleClass="imgPreview" style="width: inherit" library="img" name="img.png"  />
+                        <input type="file" id="inputImg" name="file" style="display: none"/>
+                    </div>
+                    <div class="p-sm-12">
+                        <p:button icon="pi pi-upload"  styleClass="ui-button-secondary corDaLogo btnEnviarImagem" onclick="" value="Enviar Imagem" />
+                    </div>
+                </div>
+
+
+                <div class="p-sm-9">
+                    <div class="p-sm-12"><p:inputText styleClass="titulo"  placeholder="Título"/></div>
+                    <div class="p-sm-12">
+                        <p:inputTextarea styleClass="resumo" rows="9" cols="30" maxlength="1000" counter="display"
+                                         counterTemplate="{0} caracteres restantes."
+                                         placeholder="Resumo" />
+                        <h:outputText styleClass="padraoTexto" id="display" />
+                    </div>
+                    <div class="p-sm-12"><p:inputText styleClass="autor" placeholder="Autor"/></div>
+                    <div class="p-sm-12"><p:inputText styleClass="editora" placeholder="Editora"/></div>
+                    <div class="p-sm-12"><p:inputNumber styleClass="numero_paginas" padControl="false"  thousandSeparator=""  placeholder="Quantidade de Páginas" /></div>
+                    <div class="p-sm-12">
+                        <h4 class="padraoTexto">Selecione até 3 gêneros:</h4>
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Romance" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Literatura Fantástica" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Fábula" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Ficção" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Biografia" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Suspense" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Conto" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Crônica" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3 corDaLogo" icon="pi pi-check" value="Horror" rounded="true" />
+                        <p:tag styleClass="p-mr-2 p-mt-2 p-pr-3 p-pl-3  corDaLogo" icon="pi pi-check" value="Poema" rounded="true" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="p-sm-12 p-text-right p-pt-6">
+                <p:button styleClass="ui-button-secondary corDaLogo btnCadastrar" onclick="" value="Cadastrar" />
+            </div>
+        </h:form>
+
+    </ui:define>
+
+
+</ui:composition>
+
+</html>

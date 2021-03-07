@@ -13,9 +13,26 @@
 
 .conteudo{
     background-color: #F6F2F2;
+    min-height: calc(100vh - 48px);
 }
 
 .no-padding{
-    padding: 0;
+    padding: 0 !important;
 }
 
+.ui-menuitem.ui-widget.ui-corner-all:last-child {
+    float: right;
+}
+
+.ui-menuitem.ui-widget.ui-corner-all:first-child {
+    float: left;
+}
+
+.corDaLogo{
+    background-color: #6C63FF !important;
+
+}
+.padraoTexto{
+    font-family: Roboto, serif;
+    color: #6c758e;
+}

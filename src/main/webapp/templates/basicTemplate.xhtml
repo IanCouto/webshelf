@@ -9,20 +9,28 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 <h:outputStylesheet name="/css/primeflex.min.css"/>
-<h:outputStylesheet name="/css/baseStyle.css"/>
+
+
 
 <h:head>
     <title>WebShelf</title>
+    <h:outputStylesheet name="/css/baseStyle.css"/>
+    <ui:insert name="css" />
+    <ui:insert name="script" />
 </h:head>
 
 <h:body style="margin: 0">
     <!-- HEADER -->
     <div class="p-grid p-nogutter">
         <div class="p-col-12 ">
-            <p:megaMenu styleClass="header" orientation="horizontal" autoDisplay="false">
-                <p:menuitem value="Home" url="#"/>
-                <p:menuitem value="Home" url="#"/>
-            </p:megaMenu>
+            <h:form>
+                <p:menubar styleClass="header"  autoDisplay="false">
+                    <p:menuitem url="#" styleClass="no-padding">
+                        <p:graphicImage library="img" name="logo.png" height="30" />
+                    </p:menuitem>
+                    <p:menuitem styleClass="no-padding" value="Nome do Usuário" url="#"/>
+                </p:menubar>
+            </h:form>
         </div>
     </div>
 
@@ -30,8 +38,10 @@
         <!-- SIDEBAR -->
         <div class="p-sm-2 no-padding">
             <p:megaMenu styleClass="sidebar" orientation="vertical" autoDisplay="false">
-                <p:menuitem value="Home" url="#"/>
-                <p:menuitem value="Home" url="#"/>
+                <p:menuitem value="Prateleira" url="/" icon="pi pi-fw pi-book"/>
+                <p:menuitem value="Descobrir" url="#" icon="pi pi-fw pi-search"/>
+                <p:menuitem value="Cadastro" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
+                <p:menuitem value="Sair" url="#"  icon="pi pi-fw pi-sign-out"/>
             </p:megaMenu>
         </div>
 
