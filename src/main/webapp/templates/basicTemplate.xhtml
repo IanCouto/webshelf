@@ -21,22 +21,22 @@
 
 <h:body style="margin: 0">
     <!-- HEADER -->
-    <div class="p-grid p-nogutter">
+    <div class="divHeader p-grid p-nogutter">
         <div class="p-col-12 ">
             <h:form>
                 <p:menubar styleClass="header"  autoDisplay="false">
                     <p:menuitem url="#" styleClass="no-padding">
-                        <p:graphicImage library="img" name="logo.png" height="30" />
+                        <p:graphicImage styleClass="imgLogo" library="img" name="logo.png" />
                     </p:menuitem>
-                    <p:menuitem styleClass="no-padding" value="Nome do Usuário" url="#"/>
+
                 </p:menubar>
             </h:form>
         </div>
     </div>
 
-    <div class="p-grid p-nogutter">
+    <div class=" p-grid p-nogutter" style="height: 100vh">
         <!-- SIDEBAR -->
-        <div class="p-sm-2 no-padding">
+        <div class="no-padding divSidebar">
             <p:megaMenu styleClass="sidebar" orientation="vertical" autoDisplay="false">
                 <p:menuitem value="Prateleira" url="/" icon="pi pi-fw pi-book"/>
                 <p:menuitem value="Descobrir" url="/descobrir" icon="pi pi-fw pi-search"/>
@@ -46,7 +46,7 @@
         </div>
 
         <!-- CONTEUDO -->
-        <div class="p-sm-10 conteudo">
+        <div class="conteudo">
             <ui:insert name="content">
 
             </ui:insert>
