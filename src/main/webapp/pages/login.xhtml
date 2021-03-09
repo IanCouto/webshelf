@@ -6,8 +6,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
-<h:outputStylesheet name="/css/primeflex.min.css"/>
+      xmlns:p="http://primefaces.org/ui"
+>
 <h:outputStylesheet name="/css/baseStyle.css"/>
 <h:outputStylesheet name="/css/loginStyle.css"/>
 
@@ -17,20 +17,23 @@
 
 <h:body styleClass="bodyLogin">
 
-    <h:form>
-            <p:outputLabel value="Bem-vindo!"/><br/>
-            <p:outputLabel value="por favor acesse a sua conta."/>
-            <span class="ui-float-label">
-                   <p:inputText id="email" value="#{loginModel.email}"/>
-                   <p:outputLabel for="email" value="email"/>
-            </span>
-            <span class="ui-float-label">
-                    <p:password id="senha" value="#{loginModel.senha}" toggleMask="true" redisplay="true"/>
-                    <p:outputLabel for="senha" value="senha"/>
-            </span>
-            <p:button value="Entrar"/><br/>
-            <p:outputLabel value="Esqueceu a senha?"/>
+    <h:form method="get" class="form-horizontal">
+        <p:outputLabel value="Bem-vindo!"/><br/>
+        <p:outputLabel value="por favor acesse a sua conta."/>
+        <span class="ui-float-label">
+           <p:inputText id="email" value="#{loginControl.usuario.email}"/>
+           <p:outputLabel for="email" value="email"/>
+        </span>
+        <span class="ui-float-label">
+            <p:password id="senha" value="#{loginControl.usuario.senha}" toggleMask="true" redisplay="true"/>
+            <p:outputLabel for="senha" value="senha"/>
+        </span>
+        <p:commandLink styleClass="btn btn-primary" value="BUSCAR"
+                       id="pesquisar" update="@formulario"
+                       actionListener="#{loginControl.efetuaLogin}"
+                       ajax="false" />
     </h:form>
+
 </h:body>
 
 </html>

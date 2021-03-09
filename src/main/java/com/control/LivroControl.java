@@ -21,10 +21,6 @@ import java.util.List;
 @RequestMapping("/livros")
 public class LivroControl {
 
-    @Value("${file.path.images}")
-    private String UPLOADED_FOLDER;
-
-
     @Autowired
     private LivrosRepository livrosRepository;
 

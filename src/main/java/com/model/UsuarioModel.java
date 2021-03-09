@@ -14,7 +14,6 @@ import java.util.Date;
 @Entity(name = "usuarios")
 @Getter
 @Setter
-
 public class UsuarioModel  implements Serializable {
     @Id
     @GeneratedValue
@@ -22,7 +21,7 @@ public class UsuarioModel  implements Serializable {
     private int id;
 
     @Column(name = "nome")
-    private int nome;
+    private String nome;
 
     @Column(name = "email")
     private String email;
