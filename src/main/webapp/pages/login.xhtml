@@ -21,7 +21,7 @@
         <p:outputLabel value="Bem-vindo!"/><br/>
         <p:outputLabel value="por favor acesse a sua conta."/>
         <span class="ui-float-label">
-           <p:inputText id="email" value="#{loginControl.usuario.email}"/>
+           <p:inputText id="email" value="#{loginControl.usuario.nome}"/>
            <p:outputLabel for="email" value="email"/>
         </span>
         <span class="ui-float-label">
@@ -31,7 +31,7 @@
         <p:commandLink styleClass="btn btn-primary" value="BUSCAR"
                        id="pesquisar" update="@formulario"
                        actionListener="#{loginControl.efetuaLogin}"
-                       ajax="false" />
+                       ajax="false"/>
     </h:form>
 
 </h:body>

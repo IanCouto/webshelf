@@ -31,4 +31,15 @@ public class UsuarioModel  implements Serializable {
 
     @Column(name = "dt_nascimento")
     private Date dt_nascimento;
+
+    @Override
+    public String toString() {
+        return "UsuarioModel{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                ", dt_nascimento=" + dt_nascimento +
+                '}';
+    }
 }
