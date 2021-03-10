@@ -21,6 +21,11 @@ public class NavegacaoControl {
         return "/pages/descobrir";
     }
 
+    @GetMapping("/cadastrar")
+    public String cadastrar(){
+        return "/pages/cadastrar";
+    }
+
     @GetMapping("/livros/cadastrar")
     public String cadastrarLivro(){
         return "/pages/cadastroLivros";

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:outputStylesheet name="/lib/css/primeflex.min.css"/>
+<h:outputStylesheet name="/css/cadastrarStyle.css"/>
+
+<h:head>
+    <title>WebShelf</title>
+</h:head>
+
+<h:body styleClass="bg-color-padrao vh-100">
+    <div class="p-grid p-nogutter p-text-center bg-white">
+        <h:form method="post">
+
+            <div class="p-sm-12">
+                <p:graphicImage styleClass="logo" library="img" name="logo.png" />
+            </div>
+
+            <div class="p-sm-12">
+                <p class="subtexto">Cadastro</p>
+            </div>
+
+            <div class="p-sm-12">
+                <span class="ui-input-icon-right">
+                   <i class="pi pi-user"/>
+                   <p:inputText id="nome" value="#{cadastrarControl.usuario.nome}" placeholder="Nome"/>
+                </span>
+            </div>
+
+            <div class="p-sm-12">
+                <span class="ui-input-icon-right">
+                   <i class="pi pi-envelope"/>
+                   <p:inputText id="email" value="#{cadastrarControl.usuario.email}" placeholder="E-mail"/>
+                </span>
+            </div>
+
+            <div class="p-sm-12">
+                <span class="ui-input-icon-right">
+                    <i class="pi pi-lock"/>
+                    <p:password id="senha" value="#{cadastrarControl.usuario.senha}" placeholder="Senha"/>
+                </span>
+            </div>
+
+            <div class="p-sm-12">
+                <span class="ui-input-icon-right">
+                    <i class="pi pi-lock"/>
+                    <p:password id="repetir_senha" placeholder="Repita a seha"/>
+                </span>
+            </div>
+
+            <div class="p-sm-12">
+                <span class="ui-input-icon-right">
+                    <i class="pi pi-calendar"/>
+                    <p:inputMask id="date" value="#{cadastrarControl.usuario.dt_nascimento}" mask="99/99/9999" placeholder="DD/MM/AAAA"/>
+                </span>
+            </div>
+            <p:commandButton styleClass="ui-button btn p-mt-4" value="CADASTRAR" action="#{cadastrarControl.cadastrarUsuario}"/>
+        </h:form>
+    </div>
+</h:body>
+
+</html>

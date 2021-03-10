@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.Date;
 
 
 @Entity(name = "usuarios")
@@ -30,7 +29,10 @@ public class UsuarioModel  implements Serializable {
     private String senha;
 
     @Column(name = "dt_nascimento")
-    private Date dt_nascimento;
+    private String dt_nascimento;
+
+    @Column(name = "is_admin")
+    private boolean is_admin;
 
     @Override
     public String toString() {

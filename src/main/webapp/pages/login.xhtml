@@ -7,33 +7,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
->
-<h:outputStylesheet name="/css/baseStyle.css"/>
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:outputStylesheet name="/lib/css/primeflex.min.css"/>
 <h:outputStylesheet name="/css/loginStyle.css"/>
 
 <h:head>
     <title>WebShelf</title>
 </h:head>
 
-<h:body styleClass="bodyLogin">
+<h:body styleClass="bg-color-padrao">
+    <div class="p-grid vh-100 p-nogutter">
+        <div class="p-sm-9">
+            <div class="bottom-page">
+                <p:graphicImage styleClass="logo" library="img" name="logo.png" />
+                <div class="p-text-center">
+                    <p class="subtexto">Participe da nossa comunidade de livros</p>
+                    <p:button href="/cadastrar" styleClass="ui-button btn" value="CADASTRAR"/>
+                </div>
 
-    <h:form method="get" class="form-horizontal">
-        <p:outputLabel value="Bem-vindo!"/><br/>
-        <p:outputLabel value="por favor acesse a sua conta."/>
-        <span class="ui-float-label">
-           <p:inputText id="email" value="#{loginControl.usuario.nome}"/>
-           <p:outputLabel for="email" value="email"/>
-        </span>
-        <span class="ui-float-label">
-            <p:password id="senha" value="#{loginControl.usuario.senha}" toggleMask="true" redisplay="true"/>
-            <p:outputLabel for="senha" value="senha"/>
-        </span>
-        <p:commandLink styleClass="btn btn-primary" value="BUSCAR"
-                       id="pesquisar" update="@formulario"
-                       actionListener="#{loginControl.efetuaLogin}"
-                       ajax="false"/>
-    </h:form>
+            </div>
 
+        </div>
+        <div class="p-sm-3 bg-white p-p-0">
+            <div class="divLogin">
+                <h:form method="post" styleClass="form p-text-center w-100">
+                    <div class="p-sm-12"><h1>Bem-Vindo!</h1></div>
+                    <div class="p-sm-12"><p:outputLabel value="Por favor acesse a sua conta."/></div>
+                    <div class="p-sm-12 w-100">
+                        <span class="ui-input-icon-right">
+                            <i class="pi pi-user"/>
+                            <p:inputText id="username" value="#{loginControl.usuario.nome}"
+                                         placeholder="Usuário"/>
+                        </span>
+                    </div>
+                    <div class="p-sm-12 w-100">
+                        <span class="ui-input-icon-right">
+                            <i class="pi pi-lock"/>
+                            <p:password id="toggle" value="#{loginControl.usuario.senha}"
+                                        placeholder="Senha"/>
+                        </span>
+                    </div>
+                    <p:commandButton styleClass="ui-button btn p-mt-4" value="ENTRAR" action="#{loginControl.efetuaLogin}"/>
+                </h:form>
+            </div>
+        </div>
+    </div>
 </h:body>
 
 </html>

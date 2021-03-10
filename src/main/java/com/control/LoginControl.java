@@ -23,7 +23,7 @@ public class LoginControl {
     @GetMapping
     public String efetuaLogin() {
 
-        System.out.println(usuario.getNome() + ": " +usuariosRepository.procurarUsuario(usuario.getNome()));
+        System.out.println(usuario.getNome() + ": " +usuariosRepository.procurarUsuario(usuario.getNome()) );
         return "index";
     }
 }
