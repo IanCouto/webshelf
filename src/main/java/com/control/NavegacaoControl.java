@@ -12,6 +12,11 @@ public class NavegacaoControl {
     LivrosRepository livrosRepository;
 
     @GetMapping("/")
+    public String login(){
+        return "/pages/login";
+    }
+
+    @GetMapping("/prateleira")
     public String prateleira(){
         return "/index";
     }

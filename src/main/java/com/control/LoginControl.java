@@ -10,6 +10,7 @@ import javax.annotation.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
+
 @Getter @Setter
 @ViewScoped
 @ManagedBean("loginControl")
@@ -23,7 +24,12 @@ public class LoginControl {
     @GetMapping
     public String efetuaLogin() {
 
-        System.out.println(usuario.getNome() + ": " +usuariosRepository.procurarUsuario(usuario.getNome()) );
-        return "index";
+        if(usuariosRepository.procurarUsuario(usuario.getNome())!=null ){
+            return "/index";
+        }else{
+            return "/pages/login";
+        }
+
+
     }
 }
