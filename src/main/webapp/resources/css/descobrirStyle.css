@@ -48,10 +48,26 @@ p{
 
 .btnAddDel{
     border-radius: 20px !important;
+    width: 200px;
 }
 
 .divFiltros{
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 20px;
+}
+
+.divFiltros{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.bg-red{
+    background-color: #C96868!important;
+    border-color: #C96868!important;
+}
+
+.ui-button-icon-left{
+    padding-left: 10px;
 }

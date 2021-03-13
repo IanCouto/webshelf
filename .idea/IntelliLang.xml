@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LanguageInjectionConfiguration">
+    <injection language="MariaDB" injector-id="java">
+      <display-name>NamedNativeQuery (javax.persistence)</display-name>
+      <place disabled="true"><![CDATA[psiMethod().withName("query").withParameters().definedInClass("javax.persistence.NamedNativeQuery")]]></place>
+    </injection>
+  </component>
+</project>

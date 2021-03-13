@@ -5,7 +5,6 @@ import com.repository.LivrosRepository;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -59,7 +58,6 @@ public class LivroControl {
             livro.setImg_base64(new String(encoded));
 
             LivroModel livroCriado =  livrosRepository.save(livro);
-
             URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                     .path("/{id}")
                     .buildAndExpand(livroCriado.getId())
