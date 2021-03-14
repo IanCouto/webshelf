@@ -29,6 +29,9 @@
                     <p:menuitem url="#" styleClass="no-padding">
                         <p:graphicImage styleClass="imgLogo" library="img" name="logo.png" />
                     </p:menuitem>
+                    <p:menuitem url="/cadastrar" styleClass="no-padding">
+                        <p:button value="${email_user}" iconPos="right" icon="pi pi-chevron-down" styleClass="ui-button-flat ui-button-plain" />
+                    </p:menuitem>
 
                 </p:menubar>
             </h:form>
@@ -41,11 +44,16 @@
             <p:megaMenu styleClass="sidebar" orientation="vertical" autoDisplay="false">
                 <p:menuitem value="Prateleira" url="/prateleira" icon="pi pi-fw pi-book"/>
                 <p:menuitem value="Descobrir" url="/descobrir" icon="pi pi-fw pi-search"/>
-                <p:menuitem value="Cadastro" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
-                <c:if test="${is_admin}">
-                    <p:menuitem value="Estatísticas" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
+                <c:if test="${!is_admin}">
+                    <p:menuitem value="Solicitar Livro" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
                 </c:if>
-                <p:menuitem value="Sair" url="/"  icon="pi pi-fw pi-sign-out"/>
+                <c:if test="${is_admin}">
+                    <p:menuitem value="Solicitações" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
+                </c:if>
+                <c:if test="${is_admin}">
+                    <p:menuitem value="Estatísticas" url="/livros/cadastrar" icon="pi pi-fw pi-chart-line"/>
+                </c:if>
+                <p:menuitem value="Sair" url="/sair"  icon="pi pi-fw pi-sign-out"/>
             </p:megaMenu>
         </div>
 

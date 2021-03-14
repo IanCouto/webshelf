@@ -1,15 +1,12 @@
 package com.control;
 
-import com.repository.LivrosRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class NavegacaoControl {
-
-    @Autowired
-    LivrosRepository livrosRepository;
 
     @GetMapping("/")
     public String login(){
@@ -22,7 +19,7 @@ public class NavegacaoControl {
     }
 
     @GetMapping("/descobrir")
-    public String descbrir(){
+    public String descobrir(){
         return "/pages/descobrir";
     }
 
@@ -34,5 +31,11 @@ public class NavegacaoControl {
     @GetMapping("/livros/cadastrar")
     public String cadastrarLivro(){
         return "/pages/cadastroLivros";
+    }
+
+    @GetMapping("/sair")
+    public String sair(HttpServletRequest request){
+        request.getSession().invalidate();
+        return "/pages/login";
     }
 }

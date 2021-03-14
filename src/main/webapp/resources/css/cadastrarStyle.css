@@ -32,12 +32,17 @@ body{
 .btn{
     background-color: #6c63ff !important;
     border: 1px solid #6c63ff !important;
-    max-width: 300px;
+    max-width: 250px;
     color: white !important;
     height: 40px;
     border-radius: 40px !important;
     width: 100%;
     margin-bottom: 50px!important;
+}
+
+.btnVoltar{
+    background-color: #6c63ff !important;
+    border: 1px solid #6c63ff !important;
 }
 
 .form{

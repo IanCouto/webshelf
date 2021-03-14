@@ -11,5 +11,8 @@ import org.springframework.stereotype.Repository;
 public interface UsuariosRepository extends JpaRepository<UsuarioModel, Long> {
 
     @Query(value = "SELECT * FROM usuarios WHERE nome = :nome AND senha = :senha", nativeQuery = true)
-    UsuarioModel procurarUsuario(@Param("nome") String nome,@Param("senha") String senha);
+    UsuarioModel procurarUsuario(@Param("nome") String nome, @Param("senha") String senha);
+
+    @Query(value = "SELECT * FROM usuarios WHERE id = :id", nativeQuery = true)
+    UsuarioModel procurarUsuarioPorID(@Param("id") String id);
 }

@@ -6,7 +6,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core">
 <h:outputStylesheet name="/lib/css/primeflex.min.css"/>
 <h:outputStylesheet name="/css/loginStyle.css"/>
 
@@ -16,6 +17,7 @@
 </h:head>
 
 <h:body styleClass="bg-color-padrao">
+    <p:inputText type="hidden"  styleClass="id_user" value="${id_user}"/>
     <div class="p-grid vh-100 p-nogutter">
         <div class="p-sm-9">
             <div class="bottom-page">
@@ -30,7 +32,7 @@
         </div>
         <div class="p-sm-3 bg-white p-p-0">
             <div class="divLogin">
-                <h:form id="form" method="post" styleClass="form p-text-center w-100">
+                <h:form id="form" styleClass="form p-text-center w-100">
 
                     <div class="p-sm-12"><h1>Bem-Vindo!</h1></div>
                     <div class="p-sm-12"><p:outputLabel value="Por favor acesse a sua conta."/></div>

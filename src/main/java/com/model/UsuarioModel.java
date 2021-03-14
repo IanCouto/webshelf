@@ -14,7 +14,7 @@ public class UsuarioModel  implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @Column(name = "nome")
     private String nome;
