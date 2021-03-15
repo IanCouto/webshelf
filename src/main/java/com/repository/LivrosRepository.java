@@ -29,4 +29,25 @@ public interface LivrosRepository extends JpaRepository<LivroModel, Long>{
     @Query(value = "SELECT * FROM livros\n" +
             "WHERE is_aprovado = false", nativeQuery = true)
     List<LivroModel> allLivrosDesaprovados();
+
+    /**
+     * Retorna a quantidade de livros
+     * @return
+     */
+    @Query(value = "SELECT count(*) FROM livros\n", nativeQuery = true)
+    int countAllLivros();
+
+    /**
+     * Retorna a quantidade de usuarios
+     * @return
+     */
+    @Query(value = "SELECT count(*) FROM usuarios\n", nativeQuery = true)
+    int countAllUsuarios();
+
+    /**
+     * Retorna a quantidade de livros em prateleiras
+     * @return
+     */
+    @Query(value = "SELECT count(*) FROM rel_livro_usuario\n", nativeQuery = true)
+    int countAllRelacionamentos();
 }

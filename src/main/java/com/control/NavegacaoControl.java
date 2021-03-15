@@ -25,6 +25,9 @@ public class NavegacaoControl {
     @GetMapping("/solicitacoes")
     public String solicitacoes(){ return "/pages/solicitacoes"; }
 
+    @GetMapping("/estatisticas")
+    public String estatisticas(){ return "/pages/estatisticas"; }
+
     @GetMapping("/livros/cadastrar")
     public String cadastrarLivro(){
         return "/pages/cadastroLivros";
