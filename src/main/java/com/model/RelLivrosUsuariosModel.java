@@ -44,10 +44,10 @@ public class RelLivrosUsuariosModel implements Serializable {
     private Long id;
 
     @Column(name = "id_livro")
-    private int id_livro;
+    private Long id_livro;
 
     @Column(name = "id_usuario")
-    private Integer id_usuario;
+    private Long id_usuario;
 
     @Column(name = "estado")
     private String estado;

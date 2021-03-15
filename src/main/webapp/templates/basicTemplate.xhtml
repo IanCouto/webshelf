@@ -10,7 +10,6 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://java.sun.com/jsp/jstl/core">
 <h:outputStylesheet name="/lib/css/primeflex.min.css"/>
-
 <h:head>
     <title>WebShelf</title>
     <h:outputStylesheet name="/lib/css/toastr.css"/>
@@ -48,10 +47,10 @@
                     <p:menuitem value="Solicitar Livro" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
                 </c:if>
                 <c:if test="${is_admin}">
-                    <p:menuitem value="Solicitações" url="/livros/cadastrar" icon="pi pi-fw pi-plus-circle"/>
+                    <p:menuitem value="Solicitações" url="/solicitacoes" icon="pi pi-fw pi-plus-circle"/>
                 </c:if>
                 <c:if test="${is_admin}">
-                    <p:menuitem value="Estatísticas" url="/livros/cadastrar" icon="pi pi-fw pi-chart-line"/>
+                    <p:menuitem value="Estatísticas" url="/estatisticas" icon="pi pi-fw pi-chart-line"/>
                 </c:if>
                 <p:menuitem value="Sair" url="/sair"  icon="pi pi-fw pi-sign-out"/>
             </p:megaMenu>

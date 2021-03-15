@@ -43,7 +43,6 @@ public class LivroControl {
     public Object cadastrar(@RequestParam("file") MultipartFile file, @RequestParam("dados") JSONObject dadosLivro) throws JSONException {
         LivroModel livro = new LivroModel();
 
-        String typeFile ="";
         try {
             // Get the file and save it somewhere
             byte[] bytes = file.getBytes();
@@ -56,6 +55,7 @@ public class LivroControl {
             livro.setNumero_paginas( dadosLivro.getInt("numero_paginas"));
             livro.setGeneros(dadosLivro.getJSONObject("generos").toString());
             livro.setImg_base64(new String(encoded));
+            livro.setIs_aprovado(false);
 
             LivroModel livroCriado =  livrosRepository.save(livro);
             URI uri = ServletUriComponentsBuilder.fromCurrentRequest()

@@ -14,19 +14,16 @@ public class NavegacaoControl {
     }
 
     @GetMapping("/prateleira")
-    public String prateleira(){
-        return "/index";
-    }
+    public String prateleira(){ return "/index"; }
 
     @GetMapping("/descobrir")
-    public String descobrir(){
-        return "/pages/descobrir";
-    }
+    public String descobrir(){ return "/pages/descobrir"; }
 
     @GetMapping("/cadastrar")
-    public String cadastrar(){
-        return "/pages/cadastrar";
-    }
+    public String cadastrar(){ return "/pages/cadastrar"; }
+
+    @GetMapping("/solicitacoes")
+    public String solicitacoes(){ return "/pages/solicitacoes"; }
 
     @GetMapping("/livros/cadastrar")
     public String cadastrarLivro(){

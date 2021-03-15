@@ -33,8 +33,8 @@ public class DescobrirControl {
     public Object addLivro(HttpServletRequest request, @RequestParam("id_livro") String id_livro) throws IOException {
         RelLivrosUsuariosModel rlum = new RelLivrosUsuariosModel();
 
-        rlum.setId_livro(Integer.parseInt(id_livro));
-        Integer id_user = Integer.parseInt(String.valueOf(request.getSession().getAttribute("id_user")));
+        rlum.setId_livro(Long.parseLong(id_livro));
+        Long id_user = Long.parseLong(String.valueOf(request.getSession().getAttribute("id_user")));
         rlum.setId_usuario(id_user);
         rlum.setEstado("PARA_LER");
 

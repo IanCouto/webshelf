@@ -62,10 +62,10 @@ $(document).ready(function(){
             cache:false,
             contentType: false,
             processData: false,
-            success:function(data){
-                toastr.success('O cadastro foi feito!','Sucesso')
+            success:function(){
+                toastr.success('A solicitação foi feito!','Sucesso')
             },
-            error: function(data){
+            error: function(){
                 toastr.error('Não foi possível realizar a requisição.','Erro')
             }
         });

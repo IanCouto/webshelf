@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+>
+
+<ui:composition template="/templates/basicTemplate.xhtml">
+
+    <ui:define name="css">
+        <h:outputStylesheet name="/css/solicitacoesStyle.css"/>
+    </ui:define>
+
+    <ui:define name="script">
+        <h:outputScript name="/js/solicitacoesScript.js"/>
+    </ui:define>
+
+
+    <ui:define name="content">
+        <div class="p-grid divFiltros">
+            <div class="p-sm-12 ui-inputgroup">
+                <span class="ui-input-icon-left spanProcurar">
+                    <i class="pi pi-search" />
+                    <p:inputText id="procurar" onkeyup="search()" placeholder="Procurar" />
+                </span>
+            </div>
+            <div class="p-sm-2">
+                <p:button style="display: none" id="btnFiltrar" styleClass="ui-button-secondary" icon="pi pi-filter" onclick="" value="Filtrar por:" />
+            </div>
+        </div>
+
+        <p:card styleClass="cardLivro" style="display: none">
+            <div class="p-grid">
+                <div class="p-sm-3">
+                    <div class="p-sm-12 p-text-center">
+                        <img class="imagem" src=""/>
+                    </div>
+                </div>
+                <div class="p-sm-9">
+                    <div class="div_titulo">
+                        Titulo
+                    </div>
+                    <div class="p-grid">
+                        <div class="p-sm-12"><p class="p_resumo"></p></div>
+                        <div class="p-sm-4"><p class="p_autor"></p></div>
+                        <div class="p-sm-4"><p class="p_editora"></p></div>
+                        <div class="p-sm-12"><p class="p_numero_paginas"></p></div>
+                        <div class="p-sm-12">
+                            <h4 class="padraoTexto p-m-0">Gêneros:</h4>
+                            <div class="div_generos"></div>
+                        </div>
+                        <div class="p-sm-12 p-text-right">
+                            <p:button styleClass="ui-button-secondary corDaLogo btnAdd btnAddDel p-mr-3"
+                                      onclick="aprovar(this)" icon="pi pi-plus" value="Aprovar" />
+                            <p:button styleClass="ui-button-secondary bg-red btnDel btnAddDel"
+                                      onclick="rejeitar(this)" icon="pi pi-minus" value="Rejeitar" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p:card>
+
+    </ui:define>
+
+
+</ui:composition>
+
+</html>

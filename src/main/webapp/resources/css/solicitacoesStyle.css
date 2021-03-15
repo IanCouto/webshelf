@@ -1,0 +1,73 @@
+.bg-white{
+    background-color: white;
+}
+
+.ui-card{
+    margin: 50px;
+}
+
+.spanProcurar, #procurar{
+  width: 100%;
+}
+
+#btnFiltrar, #procurar{
+    border-radius: 20px;
+}
+
+#btnFiltrar{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-color: rgb(206, 212, 218);
+    padding-left: 10px;
+
+}
+
+#btnFiltrar .ui-button-icon-left{
+    left: 20% !important;
+}
+.div_titulo{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.imagem{
+    max-height: 400px;
+    max-width: 300px;
+    width: inherit
+}
+
+.ui-card-content{
+    padding: 0!important;
+}
+
+p{
+    margin: 5px;
+}
+
+.btnAddDel{
+    border-radius: 20px !important;
+    width: 200px;
+}
+
+.divFiltros{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.divFiltros{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.bg-red{
+    background-color: #C96868!important;
+    border-color: #C96868!important;
+}
+
+.ui-button-icon-left{
+    padding-left: 10px;
+}

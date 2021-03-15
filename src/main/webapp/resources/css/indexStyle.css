@@ -1,0 +1,46 @@
+h3{
+    color: #7E84A3;
+    margin-bottom: 0;
+}
+
+.banner{
+    max-height: 250px;
+    max-width: 200px;
+    height: 250px;
+    width: 200px;
+}
+
+.img{
+    cursor: pointer;
+}
+
+#modal_img{
+    max-height: inherit;
+    max-width: inherit;
+}
+
+.ui-carousel-item{
+    text-align: center !important;
+    border: none !important;
+}
+
+.btnRemove{
+    color: white;
+    border-radius: 20px !important;
+    background-color: #C96868!important;
+    border-color: #C96868!important;
+}
+
+.btnRemove i{
+    padding-right: 10px;
+}
+
+.select_estado{
+    color: white;
+    background-color: #6C63FF!important;
+}
+
+option{
+    background-color: white;
+    color: black;
+}

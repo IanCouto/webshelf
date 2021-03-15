@@ -14,7 +14,7 @@ public class LivroModel implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @Column(name = "titulo")
     private String titulo;
@@ -36,5 +36,8 @@ public class LivroModel implements Serializable {
 
     @Column(name = "img_base64")
     private String img_base64;
+
+    @Column(name = "is_aprovado")
+    private Boolean is_aprovado;
 
 }

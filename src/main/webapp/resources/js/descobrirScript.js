@@ -4,7 +4,9 @@ $(document).ready(function(){
         type:'GET',
         url: '/descobrir/buscar',
         success:function(data){
+            console.log(data)
             data.forEach(function (livro){
+
                 var card = $('.cardLivro').first().clone()
                 card.find('.div_titulo').html(livro[1])
                 card.find('.imagem').attr('src','data:image/jpg;base64,' +livro[7])
@@ -17,9 +19,9 @@ $(document).ready(function(){
                         "<span class='ui-tag-value'>"+ genero + "</span></span>")
                 })
                 card.find('.btnAddDel').data('id_livro',livro[0])
-                if(livro[8]!=null) {
+                if(livro[9]!=null) {
                     let btn = card.find('.btnAddDel')
-                    btn.data('id_rel', livro[8])
+                    btn.data('id_rel', livro[9])
                     btn.removeClass("corDaLogo")
                     btn.addClass("bg-red")
                     btn.children().first().removeClass("pi-plus")
@@ -56,7 +58,6 @@ function addDel(btn){
         url: url,
         data: params,
         success:function(data){
-            console.log(data)
             changeBtnAddDel(btn,data)
         },
         error: function(data){

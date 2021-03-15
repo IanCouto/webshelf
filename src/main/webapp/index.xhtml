@@ -4,16 +4,93 @@
       xmlns:h="http://java.sun.com/jsf/html"
 >
 
+
 <ui:composition template="/templates/basicTemplate.xhtml">
 
+    <ui:define name="css">
+        <h:outputStylesheet name="/lib/css/owl.carousel.min.css"/>
+        <h:outputStylesheet name="/lib/css/owl.theme.default.min.css"/>
+        <h:outputStylesheet name="/lib/css/bootstrap.min.css"/>
+
+        <h:outputStylesheet name="/css/indexStyle.css"/>
+    </ui:define>
+
+    <ui:define name="script">
+        <h:outputScript name="/lib/js/owl.carousel.min.js"/>
+        <h:outputScript name="/lib/js/bootstrap.bundle.min.js"/>
+        <h:outputScript name="/js/indexScript.js"/>
+    </ui:define>
+
     <ui:define name="content">
-        Conteudo da página<br/>
-        <a href="pages/login.xhtml">login</a>
-        ${id_user}
-        ${nome_user}
-        ${email_user}
-        ${dt_user}
-        ${is_admin}
+        <div class="p-p-4">
+
+            <h3>Lendo</h3>
+            <p:divider/>
+            <div id="LENDO" class="owl-carousel owl-theme">
+
+            </div>
+            <h3 class="mt-4">Para Ler</h3>
+            <p:divider/>
+            <div id="PARA_LER" class="owl-carousel owl-theme">
+
+            </div>
+            <h3 class="mt-4">Já Lidos</h3>
+            <p:divider/>
+            <div id="LIDO" class="owl-carousel owl-theme">
+
+            </div>
+        </div>
+
+
+        <!--MODAL-->
+        <div id="modal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img id="modal_img" src="" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 id="modal_titulo" class="card-title">Titulo</h5>
+                                        <p id="modal_resumo" class="card-text">Resumo:</p>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6"><p id="modal_autor" class="card-text">Autor:</p></div>
+                                            <div class="col-md-6"><p id="modal_editora" class="card-text">Editora:</p></div>
+                                        </div>
+                                        <p id="modal_quantidade" class="card-text ">Quantidade de páginas: </p>
+                                        <p class="card-text mb-1">Gêneros</p>
+                                        <div id="modal_generos"></div>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <select id="modal_estado" class="form-select select_estado">
+                                                    <option value="PARA_LER">Para Ler</option>
+                                                    <option value="LENDO">Lendo</option>
+                                                    <option value="LIDO">Já Lido</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="button" class="btn btnRemove w-100"><i class="pi pi-minus"/>Remover</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </ui:define>
 
 </ui:composition>
