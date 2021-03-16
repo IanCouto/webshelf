@@ -34,20 +34,55 @@ public interface LivrosRepository extends JpaRepository<LivroModel, Long>{
      * Retorna a quantidade de livros
      * @return
      */
-    @Query(value = "SELECT count(*) FROM livros\n", nativeQuery = true)
+    @Query(value = "SELECT count(*) FROM livros", nativeQuery = true)
     int countAllLivros();
 
     /**
      * Retorna a quantidade de usuarios
      * @return
      */
-    @Query(value = "SELECT count(*) FROM usuarios\n", nativeQuery = true)
+    @Query(value = "SELECT count(*) FROM usuarios", nativeQuery = true)
     int countAllUsuarios();
 
     /**
      * Retorna a quantidade de livros em prateleiras
      * @return
      */
-    @Query(value = "SELECT count(*) FROM rel_livro_usuario\n", nativeQuery = true)
+    @Query(value = "SELECT count(*) FROM rel_livro_usuario", nativeQuery = true)
     int countAllRelacionamentos();
+
+    /**
+     * Retorna a quantidade de livros em prateleiras
+     * @return
+     */
+    @Query(value = "SELECT COUNT(DISTINCT editora) FROM `livros`", nativeQuery = true)
+    int countAllEditoras();
+
+    /**
+     * Retorna a quantidade de livros em prateleiras
+     * @return
+     */
+    @Query(value = "SELECT COUNT(DISTINCT autor) FROM `livros`", nativeQuery = true)
+    int countAllAutores();
+
+    /**
+     * Retorna a quantidade de livros em prateleiras
+     * @return
+     */
+    @Query(value = "SELECT COUNT(*) FROM `rel_livro_usuario` WHERE estado = 'PARA_LER'", nativeQuery = true)
+    int countAllStatusParaLer();
+
+    /**
+     * Retorna a quantidade de livros em prateleiras
+     * @return
+     */
+    @Query(value = "SELECT COUNT(*) FROM `rel_livro_usuario` WHERE estado = 'LENDO'", nativeQuery = true)
+    int countAllStatusLendo();
+
+    /**
+     * Retorna a quantidade de livros em prateleiras
+     * @return
+     */
+    @Query(value = "SELECT COUNT(*) FROM `rel_livro_usuario` WHERE estado = 'LIDO'", nativeQuery = true)
+    int countAllStatusLido();
 }

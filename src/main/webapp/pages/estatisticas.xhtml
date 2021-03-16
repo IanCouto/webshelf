@@ -10,6 +10,7 @@
         <h:outputStylesheet name="/css/estatisticasStyle.css"/>
     </ui:define>
 
+
     <ui:define name="script">
         <h:outputScript name="/js/estatisticasScript.js"/>
     </ui:define>
@@ -18,22 +19,72 @@
 
         <div class="p-grid">
 
-            <p:card styleClass="p-sm-4">
-                <div class="p-sm-12">a</div>
-                <div id="usuarios" class="p-sm-12"></div>
-            </p:card>
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de usuários cadastrados:</div>
+                    <div id="usuarios" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
 
-            <p:card styleClass="p-sm-4">
-                <div class="p-sm-12">a</div>
-                <div id="livros" class="p-sm-12"></div>
-            </p:card>
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de livros cadastrados:</div>
+                    <div id="livros" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
 
-            <p:card styleClass="p-sm-4">
-                <div class="p-sm-12">a</div>
-                <div id="livros-prateleiras" class="p-sm-12"></div>
-            </p:card>
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de livros em prateleiras:</div>
+                    <div id="livros-prateleiras" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
 
         </div>
+
+        <div class="p-grid">
+
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de editoras cadastradas:</div>
+                    <div id="editora" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
+
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de autores cadastrados:</div>
+                    <div id="autores" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
+
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de livros como "Para Ler":</div>
+                    <div id="statusParaLer" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
+
+        </div>
+
+        <div class="p-grid">
+
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de livros como "Lendo":</div>
+                    <div id="statusLendo" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
+
+            <div class="p-sm-4">
+                <p:card>
+                    <div class="p-sm-12 fonte">Total de livros como "Lidos":</div>
+                    <div id="statusLido" class="p-sm-12 negrito"></div>
+                </p:card>
+            </div>
+
+        </div>
+
     </ui:define>
 
 </ui:composition>

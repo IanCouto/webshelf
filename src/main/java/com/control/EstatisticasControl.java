@@ -24,6 +24,11 @@ public class EstatisticasControl {
         consulta.put("livros", livrosRepository.countAllLivros());
         consulta.put("usuarios", livrosRepository.countAllUsuarios());
         consulta.put("relacionamentos", livrosRepository.countAllRelacionamentos());
+        consulta.put("editora", livrosRepository.countAllEditoras());
+        consulta.put("autores", livrosRepository.countAllAutores());
+        consulta.put("statusParaLer", livrosRepository.countAllStatusParaLer());
+        consulta.put("statusLendo", livrosRepository.countAllStatusLendo());
+        consulta.put("statusLido", livrosRepository.countAllStatusLido());
         return consulta;
     }
 }
